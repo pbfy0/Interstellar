@@ -70,8 +70,9 @@ THREE.FilmShader = {
 
 			// sample the source
 			"vec4 cTextureScreen = texture2D( tDiffuse, vUv );",
+			"gl_FragColor = cTextureScreen;",
 
-			// make some noise
+			/*// make some noise
 			"float x = vUv.x * vUv.y * time *  1000.0;",
 			"x = mod( x, 13.0 ) * mod( x, 123.0 );",
 			"float dx = mod( x, 0.01 );",
@@ -95,7 +96,7 @@ THREE.FilmShader = {
 
 			"}",
 
-			"gl_FragColor =  vec4( cResult, cTextureScreen.a );",
+			"gl_FragColor =  vec4( cResult, cTextureScreen.a );",*/
 
 		"}"
 
